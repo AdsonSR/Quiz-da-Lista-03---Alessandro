@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz: Sistemas Corporativos & Infraestrutura de TI</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div class="quiz-container" id="quiz-screen">
+    <header>
+        <h1>Quiz Geral: Sistemas Corporativos & TI</h1>
+        <p>Material de Estudo 1, 2, 3 + Tópicos Base 1 e 2</p>
+        <div class="progress-bar-container">
+            <div class="progress-bar" id="progress-bar"></div>
+        </div>
+        <div class="stats">
+            <span id="question-number">Pergunta 1 de 30</span>
+            <span id="score-counter">Acertos: 0</span>
+        </div>
+    </header>
+
+    <main>
+        <div class="question-card">
+            <div class="question-text" id="question-text">Carregando pergunta...</div>
+            <div class="btn-container">
+                <button class="btn btn-true" id="btn-true" onclick="submitAnswer(true)">VERDADEIRO</button>
+                <button class="btn btn-false" id="btn-false" onclick="submitAnswer(false)">FALSO</button>
+            </div>
+            <div class="feedback" id="feedback-box"></div>
+        </div>
+
+        <div class="nav-actions">
+            <button class="action-btn" id="next-btn" onclick="nextQuestion()" disabled>Próxima Pergunta</button>
+        </div>
+    </main>
+</div>
+
+<div class="quiz-container" id="result-screen">
+    <header>
+        <h1>Resultado do Quiz</h1>
+        <p>Confira o seu desempenho final</p>
+    </header>
+    <div class="score-circle" id="score-circle">
+        0/30
+        <span>Acertos</span>
+    </div>
+    <h2 id="performance-message">Bom trabalho!</h2>
+    <p id="performance-desc">Você completou o questionário estruturado de revisão.</p>
+    <button class="action-btn" onclick="restartQuiz()" style="margin-top: 20px;">Refazer Quiz</button>
+</div>
+
+<script src="js/app.js"></script>
+</body>
+</html>
